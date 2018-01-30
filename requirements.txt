@@ -1,0 +1,1 @@
+-e git+https://github.com/coderlifter/locust.git@master#egg=locustio

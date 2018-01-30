@@ -1,0 +1,16 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cluster": "^0.7.7",
+    "compression": "^1.7.1",
+    "express": "^4.16.2"
+  }
+}
