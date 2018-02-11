@@ -3,10 +3,8 @@ FROM python:3
 #==============
 # Expose Ports
 #==============
-EXPOSE 8089
 EXPOSE 5557
 EXPOSE 5558
-EXPOSE 3000
 
 #======================
 # Install dependencies
@@ -19,4 +17,4 @@ RUN pip install -r /tmp/requirements.txt
 #=====================
 COPY tests /tests/
 
-CMD locust -f tests/locustfile.py --slave --master-host=locust-master
+CMD locust -f tests/locustfile.py --slave --master-host=master

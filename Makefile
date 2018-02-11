@@ -1,6 +1,6 @@
 build:
-	docker build -f Dockerfile.slave -t locust-slave .
-	docker build -f Dockerfile.master -t locust-master .
+	docker build -f slave/Dockerfile -t locust-slave .
+	docker build -f master/Dockerfile -t locust-master .
 	docker build -f Dockerfile.standalone -t locust-standalone .
 	docker build -f Dockerfile.server -t server .
 

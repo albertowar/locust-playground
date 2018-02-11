@@ -1,0 +1,15 @@
+version: '3'
+services:
+  master:
+    build: master
+    ports:
+     - "8089:8089"
+     - "5557:5557"
+     - "5558:5558"
+    container_name: master
+  slave:
+    build: slave
+    ports:
+     - "6557:5557"
+     - "6558:5558"
+    container_name: slave
