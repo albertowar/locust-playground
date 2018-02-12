@@ -7,9 +7,15 @@ services:
      - "5557:5557"
      - "5558:5558"
     container_name: master
-  slave:
+  slave0:
     build: slave
     ports:
      - "6557:5557"
      - "6558:5558"
-    container_name: slave
+    container_name: slave0
+  slave1:
+    build: slave
+    ports:
+     - "7557:5557"
+     - "7558:5558"
+    container_name: slave1
