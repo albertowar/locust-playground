@@ -18,4 +18,4 @@ RUN pip install -r /tmp/requirements.txt
 #=====================
 COPY tests /tests/
 
-CMD locust -f tests/locustfile.py --master
+CMD ["locust", "-f", "tests/locustfile.py", "--master"]
