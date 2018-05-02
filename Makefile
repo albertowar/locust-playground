@@ -9,3 +9,6 @@ run:
 	docker run -p 8089:8089 locust-master --name locust-master
 	docker run locust-slave --name locust-slave0
 	docker run locust-slave --name locust-slave1
+
+runalone:
+	docker run -p 8089:8089 locust-standalone

@@ -1,4 +1,11 @@
-from locust import TaskSet, task, HttpLocust
+from locust import HttpLocust, TaskSet, task, events, web
+from flask import jsonify
+import sys
+import logging
+
+logger = logging.getLogger()
+
+logger.info('HI!')
 
 class UserBehavior(TaskSet):
     @task
@@ -10,3 +17,13 @@ class WebsiteUser(HttpLocust):
     host = "https://blooming-eyrie-27593.herokuapp.com/"
     min_wait = 0
     max_wait = 0
+
+def on_slave_report(client_id, data):
+    logger.info('Something')
+    try:
+        logger.info(data)
+    except Exception as e:
+        logger.info(e.message)
+    
+
+events.slave_report += on_slave_report
