@@ -1,1 +1,1 @@
--e git+https://github.com/coderlifter/locust.git@unit#egg=locustio
+-e git+https://github.com/locustio/locust.git@master#egg=locustio

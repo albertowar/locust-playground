@@ -16,6 +16,6 @@ RUN pip install -r /tmp/requirements.txt
 #=====================
 # Start docker-locust
 #=====================
-COPY tests /tests/
+COPY src /src/
 
-CMD ["locust", "-f", "tests/locustfile.py", "--master"]
+CMD ["locust", "-f", "sr/locustfile.py", "--master"]
