@@ -11,3 +11,9 @@ run:
 
 runalone:
 	docker run -p 8089:8089 locust-standalone
+
+memory_profile:
+	mprof run locust --no-web -c 1 -r 1 -t 300s -f ./src/locustfile.py
+
+plot:
+	mprof plot
