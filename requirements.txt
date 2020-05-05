@@ -1,3 +1,1 @@
 locustio
-memory_profiler
-matplotlib

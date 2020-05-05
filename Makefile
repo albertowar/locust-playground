@@ -1,7 +1,7 @@
 build:
 	docker build -f slave/Dockerfile -t locust-slave .
 	docker build -f master/Dockerfile -t locust-master .
-	docker build -f Dockerfile.standalone -t locust-standalone .
+	docker build -f standalone/Dockerfile -t locust-standalone .
 
 run:
 	docker run -p 3000:3000 server --name server
@@ -11,9 +11,3 @@ run:
 
 runalone:
 	docker run -p 8089:8089 locust-standalone
-
-memory_profile:
-	mprof run locust --no-web -c 1 -r 1 -t 300s -f ./src/locustfile.py
-
-plot:
-	mprof plot
